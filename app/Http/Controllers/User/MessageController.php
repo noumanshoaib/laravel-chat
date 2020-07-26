@@ -33,7 +33,7 @@ class MessageController extends Controller
             $m->from = Auth::User()->id;
             $m->to = $request->to;
             $m->message = $request->message;
-         //   $m->save();
+            $m->save();
 
             event(new NewMessageNotification($m));
 
