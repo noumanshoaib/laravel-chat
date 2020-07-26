@@ -21,7 +21,6 @@
 						<img src="/images/user.png" style="width:30px" alt="" />
 						<div class="meta">
 							<p class="name">{{friend.user.name}}</p>
-							<p  class="badge badge-light">{{friend.badge}}</p>
 						</div>
 					</div>
 				</li>
