@@ -18,11 +18,10 @@
 			<ul>
 				<li v-on:click='changeFriend(friend.user.id,friend.user.name)' class="contact" :class="getActiveUserClass(friend.user.id)" :key="friend.user.id" v-for="friend in friends">
 					<div class="wrap">
-						<span class="contact-status online"></span>
 						<img src="/images/user.png" style="width:30px" alt="" />
 						<div class="meta">
 							<p class="name">{{friend.user.name}}</p>
-							<!-- <p class="preview">You just got LITT up, Mike.</p> -->
+							<p  class="badge badge-light">{{friend.badge}}</p>
 						</div>
 					</div>
 				</li>
@@ -182,9 +181,6 @@
              }
              else{
                  alert(this.friends.find(x => x.user.id === e.message.from).user.name + " has messaged you");
-                 this.selectedUser.id = e.message.from;
-                 this.selectedUser.name = this.friends.find(x => x.user.id === e.message.from).user.name;
-                 this.getMessages();
              }
         });
     }

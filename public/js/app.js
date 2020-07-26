@@ -1965,7 +1965,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     'user': {
@@ -2092,12 +2091,6 @@ __webpack_require__.r(__webpack_exports__);
         alert(_this4.friends.find(function (x) {
           return x.user.id === e.message.from;
         }).user.name + " has messaged you");
-        _this4.selectedUser.id = e.message.from;
-        _this4.selectedUser.name = _this4.friends.find(function (x) {
-          return x.user.id === e.message.from;
-        }).user.name;
-
-        _this4.getMessages();
       }
     });
   }
@@ -43754,8 +43747,6 @@ var render = function() {
               },
               [
                 _c("div", { staticClass: "wrap" }, [
-                  _c("span", { staticClass: "contact-status online" }),
-                  _vm._v(" "),
                   _c("img", {
                     staticStyle: { width: "30px" },
                     attrs: { src: "/images/user.png", alt: "" }
@@ -43764,6 +43755,10 @@ var render = function() {
                   _c("div", { staticClass: "meta" }, [
                     _c("p", { staticClass: "name" }, [
                       _vm._v(_vm._s(friend.user.name))
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "badge badge-light" }, [
+                      _vm._v(_vm._s(friend.badge))
                     ])
                   ])
                 ])
